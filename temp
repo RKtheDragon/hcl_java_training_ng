@@ -1,0 +1,57 @@
+
+http://localhost:8090/
+
+tomcatInstallFolder/webapps/ROOT/web-inf
+
+tomcatInstallFolder/webapps/jsp/web-inf
+
+c:/jsp
+
+
+http://localhost:8090/jsp/prj2/info.htm?una=Hari+Ghai&gender=0&age=%3E20%3C26&dt=&submit=Register+Me
+
+SESSION LAST LINE (HCL)
+---------------------------------------------------------------------
+Form creation, RESET and SUBMIT.. GET and POST method introduction
+---------------------------------------------------------------------
+Introduction to JavaScript to get values from elements
+---------------------------------------------------------------------
+
+
+
+	    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

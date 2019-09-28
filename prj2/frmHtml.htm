@@ -1,0 +1,204 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Nav Styling</title>
+		<style>
+			.dropdown {
+			  position: relative;
+			  display: inline-block;
+			}
+
+			.dropdown-content {
+			  display: none;
+			  position: absolute;
+			  background-color: #f9f9f9;
+			  min-width: 160px;
+			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			  padding: 12px 16px;
+			  z-index: 1;
+			}
+
+			.dropdown:hover .dropdown-content {
+			  display: block;
+			}
+			
+			/** CSS Styling for Form Elements **/
+			
+			.txt{
+			   width: 120px; border: 1.2px #f2ff34 solid; color: blue;
+			   border-radius: 5px;
+			}
+			
+			.txtArea{
+			   width: 120px; border: 1.2px #f2ff34 solid; color: blue;
+			   border-radius: 5px; height: 40px;
+			}
+			
+			label{
+			   font-weight: bold; font-size: 15px; 
+			}
+			
+			.rad{
+			  color: blue;
+			}
+			
+			.check{
+			  color: blue; border: 1px #f2ff34 solid;
+			}
+			
+			.btn{
+			  width: 120px; border: 2px red solid; background-color: blue;
+			  color: white;
+			}
+			
+			.myTbl{
+			  width: 70%; text-align: center;
+			}
+			
+			.myTRow{
+			  height: 20px; padding: 3px;
+			}
+			
+			.myTCol{
+			  letter-spacing: 2px; 
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<nav>
+			<div class="dropdown">
+			  <span>Mouse over Menu</span>
+			  <div class="dropdown-content">
+				<p>Menu Option1</p>
+			  </div>
+			</div>		
+		</nav>
+		
+		<form name="frmHtml" enctype="multipart/form-data" method="get">
+		<table class="myTbl">
+		 <tr class="myTRow">
+			<td style="width: 250px;" class="myTCol">Name</td>
+			<td style="width: 250px;">
+				<input type="text" name="uNa" id="uNa" class="txt" />
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Address</td>
+			<td>
+				<textarea name="uAddr" id="uAddr" rows="7" cols="50" class="txtArea"></textarea>
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Gender</td>
+			<td>
+				<input type="radio" name="uGen" id="uMale" value="Male" class="rad" /> 
+				<label>Male</label>
+				<input type="radio" name="uGen" id="uFemale" checked value="Female" class="rad" />
+				<label for="uFemale">Female</label>
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Hobbies</td>
+			<td>
+				<input type="checkbox" value="Chess" name="uHobies[]" id="hChess" class="check" />
+				<label for="hChess">Chess</label>
+				<input type="checkbox" value="Music" name="uHobies[]"  checked id="hMusic" class="check" />
+				<label for="hMusic">Music</label>
+				<input type="checkbox" value="Reading" name="uHobies[]" id="hReading" class="check" />
+				<label for="hReading">Reading</label>
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Country</td>
+			<td>
+				<select name="uCountry" id="uCountry" class="txt">
+				  <option value="-1">Select Country</option>
+				  <option value="ind">India</option>
+				  <option value="usa">USA</option>
+				  <option value="uk" selected>UK</option>
+				  <option value="aus">Australia</option>
+				</select>
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Phon#</td>
+			<td>
+				<input type="text" name="uPh" id="uPh" class="txt" />
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">No. Year Studied</td>
+			<td>
+				10 <input type="range" name="uNS" id="uNS" value="15" min="10" max="35" step="1" class="txt" /> 35 
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Email</td>
+			<td>
+				<input type="email" name="uEmail" id="uEmail" class="txt" required />
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">Upload Image</td>
+			<td>
+				<input type="file" name="uPic" id="uPic" class="txt" />
+			</td>
+		 </tr>
+		
+		 <tr class="myTRow">
+			<td class="myTCol">&nbsp;</td>
+			<td>
+				<input type="reset" id="btnReset" value="Reset" class="btn" />
+				<input type="submit" id="btnSubmit" value="Send" class="btn" />
+				<input type="button" id="btnShowVal" value="Show Values" class="btn" onclick="javascript: elemVal();" />
+			</td>
+		 </tr>
+	    </table>
+	  </form>
+
+	<script type="text/javascript">
+			function printChecked(){
+				var items=document.getElementsByName('uHobies[]');
+				var selectedItems="";
+				//alert(items[0].value);
+				for(var i=0; i<items.length; i++){
+					if((items[i].type=='checkbox') && (items[i].checked==true))
+						selectedItems += items[i].value + "\n";
+						//alert("me");
+				}
+				//alert(selectedItems);
+				return selectedItems;
+			}
+	
+			function elemVal(){
+			    var myTextVal = document.getElementById("uNa");
+				var myAddrVal = document.getElementById("uAddr");
+				var e  = document.getElementById("uCountry");
+				var myContry = e.options[e.selectedIndex].value;
+				var studied  = document.getElementById("uNS").value;
+				var hobbies = printChecked();
+				
+				var myMsg = "Value of Name Box is: " + myTextVal.value;
+				myMsg += "\nValue of Address Box is: " + myAddrVal.value;
+				myMsg += "\nValue of Country is: " + myContry;
+				myMsg += "\nNum of Year Studied: " + studied;
+				myMsg += "\nHobbies: " + hobbies;
+				
+				alert(myMsg);
+			   return;
+			}
+	</script>
+		
+	</body>
+	
+<html>

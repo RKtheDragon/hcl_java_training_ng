@@ -1,0 +1,9 @@
+myText {
+	color: red;
+	font-size: 14px;
+	border-radius: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid #ffb8dd;
+	padding: 2px;
+}

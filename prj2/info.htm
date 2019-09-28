@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Welcome to Project2 Home Page</title>
+		<style type="text/css">
+		  table {
+		    width: 70%; border: 1px red double; border-radius: 5px;
+		  }
+		  
+		  td {
+		    font-weight: bold; border: 1px red solid;
+		  }
+		  
+		  #infoBody{
+		     font-family: verdana; font-size: 18px; color: blue;
+		  }
+		  
+		  .una {
+		    border-radius: 3px; border: 1px green solid; color: blue;
+		  }
+		  
+		  .myBtn{
+		     background-color: #23ff12;
+			 color: blue;
+			 font-weight: bold;
+		  }
+		</style>
+	</head>
+	
+	<body id="infoBody">
+		<nav>
+			<p>
+				<a href="javascript: void();" title="Go Home">Home</a>
+				<a href="about.htm" title="About Us">About Us</a>
+				<a href="contact.htm" title="Contact Us">Contact Us</a>
+			</p>
+		</nav>
+		<form name="frmInfo" id="frmInfo" method="get">
+		<table>
+			<tr style="text-align: left;">
+				<td style="font-weight: bold;">Name</td>
+				<td>R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K</td>
+				<td>
+				  <input type="text" name="una" id="una" placeholder="Enter Name" required />
+				</td>
+			</tr>
+			<tr style="text-align: left;">
+				<td>Gender</td>
+				<td>&nbsp;</td>
+				<td>
+				  <select name="gender" id="gender">
+				    <option value="0">Select Gender</option>
+				    <option value="M">Male</option>
+					<option value="F">Female</option>
+				  </select>
+				</td>
+			</tr>
+			<tr style="text-align: left;">
+				<td style="font-weight: bold;">Age</td>
+				<td>&nbsp;</td>
+				<td>
+				  <select name="age" id="age">
+				    <option value=">20<26">20 to 25</option>
+				    <option value=">25<36">26 to 35</option>
+				    <option value=">35<76">36 to 75</option>
+				  </select>
+				</td>
+			</tr>
+			<tr style="text-align: left;">
+				<td style="font-weight: bold;">DoB</td>
+				<td>&nbsp;</td>
+				<td>
+				  <input type="date" name="dt" id="dt" />
+				</td>
+			</tr>
+			<tr style="text-align: left;">
+				<td style="font-weight: bold;">
+				  <input class="myBtn" type="reset" value="Clear All" />
+				</td>
+				<td>&nbsp;</td>
+				<td>
+				  <input class="myBtn" type="submit" name="submit" value="Register Me" />
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+<html>
